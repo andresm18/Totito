@@ -1,8 +1,19 @@
 import random
+tablero = [
+             ["","",""],
+             ["","",""],
+             ["","",""]]
+def tabler():
+    print(' ' + tablero[0][0] + '    |  ' + tablero[0][1] + '  |  ' + tablero [0][2])
+    print('     |    |')
+    print("------------------")
+    print(' ' + tablero[1][0] + '    |  ' + tablero[1][1] + '  |  ' + tablero [1][2])
+    print('     |    |')
+    print("------------------")
+    print(' ' + tablero[2][0] + '    |  ' + tablero[2][1] + '  |  ' + tablero [2][2])
+    print('     |    |')
+tabler()
 
-def tablero():
-    print("aqui iria tablero")
-tablero()
 
 def nombres_juga():
     jugador_1 = input("Ingrese nombre del primer jugador: ")
@@ -13,6 +24,9 @@ def nombres_juga():
     print("El jugador:" + quien_empieza + " " + "comenzara el juego")
     eleccion = input("Ingrese en que posicion quiere poner su pieza: ")
 nombres_juga()
+
+def espacio_libre():
+    return tablero[posi] == " "
 
 
 def totito():
