@@ -103,6 +103,9 @@ def ganador():
     if ganador == "si":
         print("Termino el juego felicidades a:",quien_gan)
         exit(0)
+    if tablero[0][0] != " " and tablero[0][1] != " " and tablero[0][2] != " " and tablero[1][0] != " " and tablero[1][1] != " " and tablero[1][2] != " " and tablero[2][0] != " " and tablero[2][1] != " " and tablero[2][2] != " ":
+        print("Termino el Juego en un Empate")
+        exit(0)
 
 
 def user_choiceP1():
