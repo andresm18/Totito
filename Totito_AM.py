@@ -53,7 +53,7 @@ def espacio_libre(posi,rt):
     else:
         False
 
-def ganador(owo):
+def ganador():
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
         quien_gan = "Jugador 1"
@@ -107,9 +107,10 @@ def ganador(owo):
         ganador = "no"
     if ganador == "si":
         print("Termino el juego felicidades a: ",quien_gan)
-        
 
-def user_choiceP1():   
+
+def user_choiceP1():
+    ganador() 
     eleccion = input("Ingrese en que posicion quiere poner su pieza:")
     if eleccion == "q":
         tablero[0][0] = "X"
@@ -133,6 +134,7 @@ def user_choiceP1():
     
 
 def user_choiceP2():
+    ganador() 
     eleccion = input("Ingrese en que posicion quiere poner su pieza:")
     if eleccion == "q":
         tablero[0][0] = "O"
@@ -169,10 +171,4 @@ def totito():
         if(turno % 2 != 0):
             print("Es el turno de: " + quien_empieza )
         user_choiceP1()
-        user_choiceP1()
-        user_choiceP1()
-
-    
-    
-    
 totito()
