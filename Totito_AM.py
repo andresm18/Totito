@@ -47,7 +47,6 @@ def ejemplo_cordenadas():
     tablero[2][2] = " "
     
 
-
 def ganador():
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
@@ -102,6 +101,9 @@ def ganador():
         ganador = "no"
     if ganador == "si":
         print("Termino el juego felicidades a:",quien_gan)
+        exit(0)
+    if tablero[0][0] != " " and tablero[0][1] != " " and tablero[0][2] != " " and tablero[1][0] != " " and tablero[1][1] != " " and tablero[1][2] != " " and tablero[2][0] != " " and tablero[2][1] != " " and tablero[2][2] != " ":
+        print("Termino el Juego en un Empate")
         exit(0)
 
 
