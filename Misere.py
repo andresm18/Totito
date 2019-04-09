@@ -51,53 +51,53 @@ def ejemplo_cordenadas():
 def ganador():
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[1][0] == "X" and tablero[1][1] == "X" and tablero[1][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[2][0] == "X" and tablero[2][1] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[0][0] == "X" and tablero[1][0] == "X" and tablero[2][0] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[0][1] == "X" and tablero[1][1] == "X" and tablero[2][1] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[0][2] == "X" and tablero[1][2] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[0][0] == "X" and tablero[1][1] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
     elif tablero[0][2] == "X" and tablero[1][1] == "X" and tablero[2][0] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = segundo
 
     elif tablero[0][0] == "O" and tablero[0][1] == "O" and tablero[0][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[1][0] == "O" and tablero[1][1] == "O" and tablero[1][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[2][0] == "O" and tablero[2][1] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[0][0] == "O" and tablero[1][0] == "O" and tablero[2][0] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[0][1] == "O" and tablero[1][1] == "O" and tablero[2][1] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[0][2] == "O" and tablero[1][2] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[0][0] == "O" and tablero[1][1] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     elif tablero[0][2] == "O" and tablero[1][1] == "O" and tablero[2][0] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = quien_empieza
     else:
         ganador = "no"
     if ganador == "si":
@@ -179,7 +179,7 @@ def user_choiceP2():
         else:
             print("lo siento ya esta tomada la posicion")
     tabler()
-
+print("Bienvenido a Misere Tic-Tac-Toe, si completas la linea pierdes")
 jugador_1 = input("Ingrese nombre del primer jugador: ")
 jugador_2 = input("Ingrese nombre del segundo jugador: ")
 lista_jugadores = [jugador_1,jugador_2]
