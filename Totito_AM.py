@@ -51,57 +51,57 @@ def ejemplo_cordenadas():
 def ganador():
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[1][0] == "X" and tablero[1][1] == "X" and tablero[1][2] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[2][0] == "X" and tablero[2][1] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[0][0] == "X" and tablero[1][0] == "X" and tablero[2][0] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[0][1] == "X" and tablero[1][1] == "X" and tablero[2][1] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[0][2] == "X" and tablero[1][2] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[0][0] == "X" and tablero[1][1] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
     elif tablero[0][2] == "X" and tablero[1][1] == "X" and tablero[2][0] == "X":
         ganador = "si"
-        quien_gan = jugador_1
+        quien_gan = quien_empieza
 
     elif tablero[0][0] == "O" and tablero[0][1] == "O" and tablero[0][2] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[1][0] == "O" and tablero[1][1] == "O" and tablero[1][2] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[2][0] == "O" and tablero[2][1] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[0][0] == "O" and tablero[1][0] == "O" and tablero[2][0] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[0][1] == "O" and tablero[1][1] == "O" and tablero[2][1] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[0][2] == "O" and tablero[1][2] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[0][0] == "O" and tablero[1][1] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     elif tablero[0][2] == "O" and tablero[1][1] == "O" and tablero[2][0] == "O":
         ganador = "si"
-        quien_gan = jugador_2
+        quien_gan = segundo
     else:
         ganador = "no"
     if ganador == "si":
-        print("Termino el juego felicidades a: ",quien_gan)
+        print("Termino el juego felicidades a:",quien_gan)
         exit(0)
 
 
@@ -109,6 +109,7 @@ def user_choiceP1():
     ganador() 
     valido = "n"
     while valido != "y":
+        print(quien_empieza)
         eleccion = input("Ingrese en que posicion quiere poner su pieza: ")
         if eleccion == "q" and tablero[0][0] == " ":
             tablero[0][0] = "X"
@@ -120,7 +121,7 @@ def user_choiceP1():
             tablero[0][2] = "X"
             valido = "y"
         elif eleccion == "a" and tablero[1][0] == " ":
-            tablero[1][0] = "x"
+            tablero[1][0] = "X"
             valido = "y"
         elif eleccion == "s" and tablero[1][1] == " ":
             tablero[1][1] = "X"
@@ -146,6 +147,7 @@ def user_choiceP2():
     ganador() 
     valido = "n"
     while valido != "y":
+        print(segundo)
         eleccion = input("Ingrese en que posicion quiere poner su pieza: ")
         if eleccion == "q" and tablero[0][0] == " ":
             tablero[0][0] = "O"
@@ -180,12 +182,14 @@ def user_choiceP2():
 
 jugador_1 = input("Ingrese nombre del primer jugador: ")
 jugador_2 = input("Ingrese nombre del segundo jugador: ")
+lista_jugadores = [jugador_1,jugador_2]
+num_juga = 2
+lista_a_random = random.sample(lista_jugadores,num_juga)
+quien_empieza = lista_a_random[0]
+segundo = lista_a_random[1]
 
 def totito():
     tabler()
-    print(jugador_1,jugador_2)
-    lista_jugadores = [jugador_1,jugador_2]
-    quien_empieza = (random.choice(lista_jugadores))
     print("Empieza: ",quien_empieza)
     ejemplo_cordenadas()
     while quien_gan != "owo":
