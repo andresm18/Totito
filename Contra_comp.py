@@ -51,53 +51,53 @@ def ejemplo_cordenadas():
 def ganador():
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[1][0] == "X" and tablero[1][1] == "X" and tablero[1][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[2][0] == "X" and tablero[2][1] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[0][0] == "X" and tablero[1][0] == "X" and tablero[2][0] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[0][1] == "X" and tablero[1][1] == "X" and tablero[2][1] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[0][2] == "X" and tablero[1][2] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[0][0] == "X" and tablero[1][1] == "X" and tablero[2][2] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
     elif tablero[0][2] == "X" and tablero[1][1] == "X" and tablero[2][0] == "X":
         ganador = "si"
-        quien_gan = quien_empieza
+        quien_gan = jugador_1
 
     elif tablero[0][0] == "O" and tablero[0][1] == "O" and tablero[0][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[1][0] == "O" and tablero[1][1] == "O" and tablero[1][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[2][0] == "O" and tablero[2][1] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[0][0] == "O" and tablero[1][0] == "O" and tablero[2][0] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[0][1] == "O" and tablero[1][1] == "O" and tablero[2][1] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[0][2] == "O" and tablero[1][2] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[0][0] == "O" and tablero[1][1] == "O" and tablero[2][2] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     elif tablero[0][2] == "O" and tablero[1][1] == "O" and tablero[2][0] == "O":
         ganador = "si"
-        quien_gan = segundo
+        quien_gan = jugador_2
     else:
         ganador = "no"
     if ganador == "si":
@@ -112,7 +112,7 @@ def user_choiceP1():
     ganador() 
     valido = "n"
     while valido != "y":
-        print(quien_empieza)
+        print(jugador_1)
         eleccion = input("Ingrese en que posicion quiere poner su pieza: ")
         if eleccion == "q" and tablero[0][0] == " ":
             tablero[0][0] = "X"
@@ -150,7 +150,7 @@ def Computer_choice():
     ganador() 
     valido = "n"
     while valido != "y":
-        print(segundo)
+        print(jugador_2)
         opciones = ["q","w","e","a","s","d","z","x","c"]
         eleccion = random.choice(opciones)
         if eleccion == "q" and tablero[0][0] == " ":
@@ -185,18 +185,16 @@ def Computer_choice():
     tabler()
 
 jugador_1 = input("Ingrese nombre del primer jugador: ")
-posibles_nombres = ["Saad Maan","Sam Sung","Chris P. Bacon","Krystal Ball"]
+posibles_nombres = ["Saad Maan","Sam Sung","Chris P. Bacon","Krystal Ball","Abe Rudder","Al Beback","Amy Stake","Andy Tover","Carrie Oakey"
+,"Chris P. Nugget","Clara Nett","Dale E. Bread","Ella Vader","Emma Fraid","Faye Tallity","Anna Conda","Barry Cade","Helen Back","Marty Graw","Paige Turner"
+,"Pepe Roni","Polly Ester","Ray Gunn","Tim Burr","Robyn Banks","Penny Wise","Jo King","Terry Bill","Justin Case","Anna Prentice","Anna Sasin","Ana Tomía"
+,"Helen Chufe","Elena Nito","Elsa Capunta","Armando Casas","Esteban Dido","Zoyla Vaca","Elsa Polindo","Elsa Pato","Elmer Curio","Rosa Espinoza","Susana Oria"]
 nombre_de_comp = random.choice(posibles_nombres)
 jugador_2 = nombre_de_comp
-lista_jugadores = [jugador_1,jugador_2]
-num_juga = 2
-lista_a_random = random.sample(lista_jugadores,num_juga)
-quien_empieza = lista_a_random[0]
-segundo = lista_a_random[1]
 
 def totito():
     tabler()
-    print("Empieza: ",quien_empieza)
+    print("Empieza: ",jugador_1)
     ejemplo_cordenadas()
     while quien_gan != "owo":
         tabler()
