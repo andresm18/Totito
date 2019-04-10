@@ -48,7 +48,7 @@ def ejemplo_cordenadas():
     
 
 
-def ganador():
+def ganadorcc():
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
         quien_gan = jugador_1
@@ -108,8 +108,8 @@ def ganador():
         exit(0)
 
 
-def user_choiceP1():
-    ganador() 
+def user_choiceP1CC():
+    ganadorcc() 
     valido = "n"
     while valido != "y":
         print(jugador_1)
@@ -147,7 +147,7 @@ def user_choiceP1():
     
 
 def Computer_choice():
-    ganador() 
+    ganadorcc() 
     valido = "n"
     while valido != "y":
         print(jugador_2)
@@ -198,6 +198,6 @@ def totito():
     ejemplo_cordenadas()
     while quien_gan != "owo":
         tabler()
-        user_choiceP1()
+        user_choiceP1CC()
         Computer_choice()
 totito()
