@@ -5,6 +5,7 @@ tablero = [
              [" "," "," "],
              [" "," "," "]]
 def tabler():
+    '''Tablero para imprimir'''
     print(' ' + tablero[0][0] + '   |  ' + tablero[0][1] + ' |  ' + tablero [0][2])
     print('     |    |')
     print("------------------")
@@ -16,6 +17,7 @@ def tabler():
 
 
 def ejemplo_cordenadas():
+    '''Tablero que muestra al usuario tecla correspondiente a espacio en tablero'''
     print("Abajo esta el tablero con las teclas y sus respectivas posiciones")
     tablero[0][0] = "q"
     tablero[0][1] = "w"
@@ -46,6 +48,7 @@ def ejemplo_cordenadas():
     
 
 def ganador():
+    '''Define ganador del totito Jugador contra Jugador'''
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
         quien_gan = quien_empieza
@@ -106,6 +109,7 @@ def ganador():
 
 
 def user_choiceP1():
+    '''Recibe input del Jugador # 1'''
     ganador() 
     valido = "n"
     while valido != "y":
@@ -144,6 +148,7 @@ def user_choiceP1():
     
 
 def user_choiceP2():
+    '''Recibe input del Jugador # 2'''
     ganador() 
     valido = "n"
     while valido != "y":
@@ -181,6 +186,7 @@ def user_choiceP2():
     tabler()
 
 def user_choiceP1mis():
+    '''Recibe eleccion del Jugador 1 para Misere Tic-Tac-Toe'''
     ganadormis() 
     valido = "n"
     while valido != "y":
@@ -219,6 +225,7 @@ def user_choiceP1mis():
     
 
 def user_choiceP2mis():
+    '''Recibe eleccion del Jugador 2 para Misere Tic-Tac-Toe'''
     ganadormis() 
     valido = "n"
     while valido != "y":
@@ -256,6 +263,7 @@ def user_choiceP2mis():
     tabler()
 
 def ganadorcc():
+    '''Define el ganador de Jugador VS Computadora'''
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
         quien_gan = jugador_1
@@ -316,6 +324,7 @@ def ganadorcc():
 
 
 def Computer_choice():
+    '''Recibe eleccion de la computadora'''
     ganadorcc() 
     valido = "n"
     while valido != "y":
@@ -354,6 +363,7 @@ def Computer_choice():
     tabler()
 
 def ganadormis():
+    '''Define al ganador de Misere Tic-Tac-Toe'''
     if tablero[0][0] == "X" and tablero[0][1] == "X" and tablero[0][2] == "X":
         ganador = "si"
         quien_gan = segundo
@@ -413,6 +423,7 @@ def ganadormis():
         exit(0) 
 
 def user_choiceP1CC():
+    '''Recibe eleccion del Jugador en modo de juego contra computadora'''
     ganadorcc() 
     valido = "n"
     while valido != "y":
@@ -450,6 +461,7 @@ def user_choiceP1CC():
         tabler()
 
 def menu():
+    '''El menu y tambien en parte sirve como "main" function'''
     print("1.Jugador vs jugados\n2.Jugador vs Computadora\n3.Misere")
     pick = input("elija modo de juego ingresando el numero que corresponde: ")
     if pick == "1":
